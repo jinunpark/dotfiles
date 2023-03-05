@@ -25,4 +25,5 @@ sudo apt install -y ripgrep
 sudo apt install -y fd-find
 sudo apt install -y zip unzip
 
+wget https://github.com/neovim/neovim/releases/download/v0.8.3/nvim-linux64.deb
 sudo apt install -y ./nvim-linux64.deb
