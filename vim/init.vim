@@ -40,6 +40,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'google/vim-searchindex'
 
     Plug 'tpope/vim-fugitive'       " git 명령어 wrapper
+    PlugFile 'set-fugitive.vim'
     Plug 'airblade/vim-gitgutter'   " git diff 를 라인 넘버 옆에 표시.
 
     Plug 'laher/fuzzymenu.vim'
@@ -55,6 +56,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'milkypostman/vim-togglelist'
     Plug 'AndrewRadev/splitjoin.vim'
     Plug 'jiangmiao/auto-pairs', {'for': ['go', 'javascript', 'rust', 'kotlin']}
+    PlugFile 'set-autopairs.vim'
 
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     PlugFile 'set-golang.vim'
@@ -63,6 +65,10 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'junegunn/seoul256.vim'
     PlugFile 'set-seoul256.vim'
+
+    PlugFile 'set-copy-filename.vim'
+    PlugFile 'set-buffer.vim'
+    PlugFile 'set-register.vim'
 
 call plug#end()
 
@@ -79,6 +85,12 @@ for include_file in s:file_plug_candidate
         echo "File " . include_file . " does not exists."
     endif
 endfor
+
+command! Ncd :cd %:p:h
+
+set fencs=utf-8,euc-kr
+
+set clipboard+=unnamedplus
 
 let s:file_plug_candidate = v:null
 
