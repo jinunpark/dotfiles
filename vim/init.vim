@@ -33,8 +33,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'kshenoy/vim-signature'
 
     Plug 'nvim-lua/plenary.nvim'
+
     Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-file-browser.nvim'
     PlugFile 'set-telescope.vim'
+
     Plug 'nvim-lua/popup.nvim'
 
     Plug 'google/vim-searchindex'
@@ -86,7 +89,7 @@ for include_file in s:file_plug_candidate
     endif
 endfor
 
-command! Ncd :cd %:p:h
+command! Ncd :lcd %:p:h
 
 set fencs=utf-8,euc-kr
 
