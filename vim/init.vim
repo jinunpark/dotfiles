@@ -66,6 +66,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'stephpy/vim-yaml'
 
+    Plug 'nvim-tree/nvim-web-devicons'
     Plug 'junegunn/seoul256.vim'
     PlugFile 'set-seoul256.vim'
 
