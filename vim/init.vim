@@ -1,11 +1,22 @@
 let g:config_dir = expand('~/dotfiles/vim/config/')
 let s:file_plug_candidate = []
 
+" using cascadia pl 
+" https://github.com/microsoft/cascadia-code
+
 command! -nargs=1 PlugFile call <SID>plug_file(<args>)
 function! s:plug_file( ... )
     call add(s:file_plug_candidate, g:config_dir . a:1)
 endfunction
+
 call plug#begin('~/.vim/plugged')
+    Plug 'rcarriga/nvim-notify'
+    PlugFile 'set-notify.vim'
+    Plug 'kamykn/popup-menu.nvim'
+    Plug 'simeji/winresizer'
+    PlugFile 'set-winresizer.vim'
+
+
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     PlugFile 'set-fzf.vim'
@@ -13,20 +24,26 @@ call plug#begin('~/.vim/plugged')
     Plug 'simnalamburt/vim-mundo'
     PlugFile 'set-mundo.vim'
 
-    Plug 'simeji/winresizer'
-    PlugFile 'set-winresizer.vim'
-
     Plug 'mhinz/vim-startify'
     PlugFile 'set-startify.vim'
 
     Plug 'bling/vim-airline'
+    PlugFile 'set-airline.vim'
     Plug 'luochen1990/rainbow'
     Plug 'kshenoy/vim-signature'
+
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    PlugFile 'set-telescope.vim'
+    Plug 'nvim-lua/popup.nvim'
 
     Plug 'google/vim-searchindex'
 
     Plug 'tpope/vim-fugitive'       " git 명령어 wrapper
     Plug 'airblade/vim-gitgutter'   " git diff 를 라인 넘버 옆에 표시.
+
+    Plug 'laher/fuzzymenu.vim'
+    PlugFile 'set-fuzzymenu.vim'
 
     Plug 'vimwiki/vimwiki'
     PlugFile 'set-vimwiki.vim'
@@ -42,15 +59,27 @@ call plug#begin('~/.vim/plugged')
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     PlugFile 'set-golang.vim'
 
+    Plug 'stephpy/vim-yaml'
+
+    Plug 'junegunn/seoul256.vim'
+    PlugFile 'set-seoul256.vim'
+
 call plug#end()
+
+let g:python3_host_prog = '~/.pyenv/versions/3.10.10/envs/neovim/bin/python'
 
 syntax enable
 
 filetype plugin indent on
 
 for include_file in s:file_plug_candidate
-    execute "source " . include_file
+    if filereadable(include_file)
+        execute "source " . include_file
+    else
+        echo "File " . include_file . " does not exists."
+    endif
 endfor
+
 let s:file_plug_candidate = v:null
 
 "* vim set 설정
@@ -117,7 +146,6 @@ let s:file_plug_candidate = v:null
     "set noimd               " no imdisable 한글 입력기 관련인데 mac 에서는 안 통하는듯
     set cindent autoindent smartindent
     set history=200 undolevels=2000
-    " set cursorcolumn
     set langmap=ㅁa,ㅠb,ㅊc,ㅇd,ㄷe,ㄹf,ㅎg,ㅗh,ㅑi,ㅓj,ㅏk,ㅣl,ㅡm,ㅜn,ㅐo,ㅔp,ㅂq,ㄱr,ㄴs,ㅅt,ㅕu,ㅍv,ㅈw,ㅌx,ㅛy,ㅋz
     set splitbelow
     set splitright
