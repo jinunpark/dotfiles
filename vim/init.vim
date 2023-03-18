@@ -61,8 +61,15 @@ call plug#begin('~/.vim/plugged')
     Plug 'jiangmiao/auto-pairs', {'for': ['go', 'javascript', 'rust', 'kotlin']}
     PlugFile 'set-autopairs.vim'
 
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     PlugFile 'set-golang.vim'
+
+    Plug 'rust-lang/rust.vim'
+
+    Plug 'vim-test/vim-test'
+    PlugFile 'set-vim-test-rust.vim'
 
     Plug 'stephpy/vim-yaml'
 
@@ -73,6 +80,8 @@ call plug#begin('~/.vim/plugged')
     PlugFile 'set-copy-filename.vim'
     PlugFile 'set-buffer.vim'
     PlugFile 'set-register.vim'
+
+    PlugFile 'set-markdown.vim'
 
 call plug#end()
 
