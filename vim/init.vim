@@ -72,6 +72,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-test/vim-test'
     PlugFile 'set-vim-test-rust.vim'
 
+    Plug 'scalameta/nvim-metals'
+
     Plug 'stephpy/vim-yaml'
 
     Plug 'nvim-tree/nvim-web-devicons'
