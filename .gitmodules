@@ -1,0 +1,3 @@
+[submodule "lang-server/java-language-server"]
+	path = lang-server/java-language-server
+	url = https://github.com/georgewfraser/java-language-server

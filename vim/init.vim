@@ -61,6 +61,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'jiangmiao/auto-pairs', {'for': ['go', 'javascript', 'rust', 'kotlin']}
     PlugFile 'set-autopairs.vim'
 
+    Plug 'neovim/nvim-lspconfig'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
