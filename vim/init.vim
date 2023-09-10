@@ -52,6 +52,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'vimwiki/vimwiki'
     PlugFile 'set-vimwiki.vim'
 
+    Plug 'renerocksai/telekasten.nvim'
+
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-commentary'
