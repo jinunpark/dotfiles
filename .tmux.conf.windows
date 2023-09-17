@@ -4,8 +4,6 @@ set -g default-terminal "xterm-256color"
 set-option -ga terminal-overrides ",tmux-256color:Tc,xterm-256color:Tc"
 set -g terminal-overrides 'xterm*:smcup@:rmcup@'
 
-set -g default-shell $SHELL # 기본 셸 사용
-
 ## 윈도우 설정
 
 set -g base-index 1
@@ -55,17 +53,17 @@ bind-key C-l swap-window -t +1\; select-window -t +1
 ### 윈도우 리스트
 # 현재 윈도우 상태
 # ~/dotfiles/bin/simple-pwd
-#set-window-option -g window-status-current-format '#{window_index}:#{pane_current_command} #[fg=blue,bold]#(pwd="#{pane_current_path}"; simple-pwd ${pwd})'
+set-window-option -g window-status-current-format '#{window_index}:#{pane_current_command} #[fg=blue,bold]#(pwd="#{pane_current_path}"; simple-pwd ${pwd})'
 # set-window-option -g window-status-current-format '#{window_index}:#{pane_current_command} #[fg=blue,bold]#(pwd="#{pane_current_path}"; if [[ $HOME == ${pwd} ]]; then echo ~; else echo ${pwd####*/}; fi)'
 # 다른 윈도우 상태
-#set-window-option -g window-status-format '#{window_index}#[fg=colour244]:#{pane_current_command} #[fg=colour244]#(pwd="#{pane_current_path}"; simple-pwd ${pwd})'
+set-window-option -g window-status-format '#{window_index}#[fg=colour244]:#{pane_current_command} #[fg=colour244]#(pwd="#{pane_current_path}"; simple-pwd ${pwd})'
 
 ## 화면 보여주기 설정
 
 ### 커서 모양
 # tmux 에서 vim을 사용할 때 모드별로 커서 모양을 다르게 설정한다
     # https://gist.github.com/andyfowler/1195581?permalink_comment_id=2852367#gistcomment-2852367
-#set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
+set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
 
 ### 최하단 status 표시줄
 
@@ -92,8 +90,8 @@ bind P paste-buffer
 bind-key -T copy-mode-vi v send-keys -X begin-selection
 bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
 unbind -T copy-mode-vi Enter
-bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'pbcopy'
-bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel 'pbcopy'
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'clip.exe'
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel 'clip.exe'
 
 # 위의 pbcopy 가 잘 작동하고 있어 아래 설정은 필요 없음
 # set -g default-command "reattach-to-user-namespace -l bash"
