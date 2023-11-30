@@ -77,6 +77,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'scalameta/nvim-metals'
 
     Plug 'stephpy/vim-yaml'
+    Plug 'darflink/vim-plist'
 
     Plug 'nvim-tree/nvim-web-devicons'
     Plug 'junegunn/seoul256.vim'
