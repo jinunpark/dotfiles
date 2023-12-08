@@ -50,6 +50,7 @@ call plug#begin('~/.vim/plugged')
     PlugFile 'set-fuzzymenu.vim'
 
     Plug 'vimwiki/vimwiki'
+    Plug 'ElPiloto/telescope-vimwiki.nvim'
     PlugFile 'set-vimwiki.vim'
 
     Plug 'renerocksai/telekasten.nvim'
@@ -77,7 +78,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'scalameta/nvim-metals'
 
     Plug 'stephpy/vim-yaml'
-    Plug 'darflink/vim-plist'
+    Plug 'darfink/vim-plist'
 
     Plug 'nvim-tree/nvim-web-devicons'
     Plug 'junegunn/seoul256.vim'
