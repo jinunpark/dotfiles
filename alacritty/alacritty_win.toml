@@ -1,0 +1,223 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#002b36"
+blue = "#839496"
+cyan = "#93a1a1"
+green = "#586e75"
+magenta = "#6c71c4"
+red = "#cb4b16"
+white = "#fdf6e3"
+yellow = "#657b83"
+
+[colors.cursor]
+cursor = "#657b83"
+text = "#fdf6e3"
+
+[colors.normal]
+black = "#073642"
+blue = "#268bd2"
+cyan = "#2aa198"
+green = "#859900"
+magenta = "#d33682"
+red = "#dc322f"
+white = "#eee8d5"
+yellow = "#b58900"
+
+[colors.primary]
+background = "#fdf6e3"
+foreground = "#657b83"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "Cascadia Code PL"
+style = "Bold"
+
+[font.bold_italic]
+family = "Cascadia Code PL"
+style = "Bold Italic"
+
+[font.italic]
+family = "Cascadia Code PL"
+style = "Italic"
+
+[font.normal]
+family = "Cascadia Code PL"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 1
+
+[[keyboard.bindings]]
+chars = "\u0011:"
+key = "Semicolon"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0011:"
+key = "Semicolon"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011\""
+key = "S"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011%"
+key = "D"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011c"
+key = "T"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011X"
+key = "W"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011o"
+key = "O"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011\u000F"
+key = "O"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u00111"
+key = "Key1"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u00112"
+key = "Key2"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u00113"
+key = "Key3"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u00114"
+key = "Key4"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u00115"
+key = "Key5"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u00116"
+key = "Key6"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u00116"
+key = "Key7"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u00117"
+key = "Key8"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u00119"
+key = "Key9"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011p"
+key = "PageUp"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0011n"
+key = "PageDown"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0011n"
+key = "Tab"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0011w"
+key = "E"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011H"
+key = "Left"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011J"
+key = "Down"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011K"
+key = "Up"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011L"
+key = "Right"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011\b"
+key = "Comma"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011\f"
+key = "Period"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0011["
+key = "LBracket"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[scrolling]
+history = 100000
+
+[shell]
+args = ["--cd ~", "--exec tmux"]
+program = "wsl"
+
+[window]
+decorations = "none"
+dynamic_padding = false
+opacity = 1.0
+startup_mode = "Maximized"
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 6
+y = 6
